@@ -11,6 +11,7 @@ angular.module("flapperNews", ['ui.router'])
         controller: 'MainCtrl'
       });
       
+    $stateProvider  
       .state('posts', {
         url: '/posts/{id}',
         templateUrl: '/posts.html',
