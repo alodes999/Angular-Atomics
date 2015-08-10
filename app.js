@@ -7,6 +7,7 @@ angular.module("flapperNews", [])
 
 .controller("MainCtrl", [
 '$scope',
+'posts',
 function($scope){
   $scope.posts = [
     {title: 'post 1', upvotes: 5},
