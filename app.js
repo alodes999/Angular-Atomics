@@ -69,6 +69,10 @@ function($scope, $stateParams, posts) {
       upvotes: 0 
     });
     $scope.body = '';
-  }
+  };
+  
+  $scope.incrementUpvotes = function(comment){
+    comment.upvotes += 1;
+  };
 }])
 
