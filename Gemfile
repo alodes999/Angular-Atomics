@@ -34,3 +34,5 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'sprockets', '2.12.3'
+
