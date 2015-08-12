@@ -7,15 +7,19 @@ function($scope, posts){
   
   $scope.addPost = function(){
     if(!$scope.title || $scope.title === '') { return; }
-    $scope.posts.push({
+    posts.create({
       title: $scope.title,
       link: $scope.link,
-      upvotes: 0,
-      comments: [
-        {author: 'Joe', body: 'Cool post!', upvotes: 0},
-        {author: 'Bob', body: 'Good idea but completely wrong', upvotes: 0}
-      ]
     });
+    // $scope.posts.push({
+    //   title: $scope.title,
+    //   link: $scope.link,
+    //   upvotes: 0,
+    //   comments: [
+    //     {author: 'Joe', body: 'Cool post!', upvotes: 0},
+    //     {author: 'Bob', body: 'Good idea but completely wrong', upvotes: 0}
+    //   ]
+    // });
     $scope.title = '';
     $scope.link = '';
   };
