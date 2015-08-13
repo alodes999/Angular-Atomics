@@ -23,7 +23,7 @@ angular.module("flapperNews", ['ui.router', 'templates'])
         controller: 'PostsCtrl',
         resolve: {
           post: ['$stateParams', 'posts', function($stateParams, posts) {
-            return post.get($stateParams.id);
+            return posts.get($stateParams.id);
           }]
         }
       });
