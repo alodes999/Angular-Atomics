@@ -18,6 +18,6 @@ function($scope, posts, post) {
   };
   
   $scope.incrementUpvotes = function(comment){
-    comment.upvotes += 1;
+    posts.upvoteComment(post, comment);
   };
 }])
