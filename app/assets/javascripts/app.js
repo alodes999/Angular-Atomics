@@ -14,8 +14,9 @@ angular.module("flapperNews", ['ui.router', 'templates', 'Devise'])
             return posts.getAll();
           }]
         }
-      })
-        
+      });
+      
+    $stateProvider  
       .state('posts', {
         url: '/posts/{id}',
         templateUrl: 'posts/_posts.html',
@@ -25,8 +26,9 @@ angular.module("flapperNews", ['ui.router', 'templates', 'Devise'])
             return posts.get($stateParams.id);
           }]
         }
-      })
+      });
       
+    $stateProvider
       .state('login', {
         url: '/login',
         templateUrl: 'auth/_login.html',
@@ -36,8 +38,9 @@ angular.module("flapperNews", ['ui.router', 'templates', 'Devise'])
             $state.go('home');
           })
         }]
-      })
+      });
       
+    $stateProvider
       .state('register', {
         url: '/register',
         templateUrl: 'auth/_register.html',
